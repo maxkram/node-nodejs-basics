@@ -7,4 +7,3 @@ export const read = async () => {
     console.log(data.toString());
   });
 };
-read();

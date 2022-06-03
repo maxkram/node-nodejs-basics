@@ -7,4 +7,4 @@ export const remove = async () => {
     console.log('Ну все, чё, нету больше файлика!');
   });
 };
-remove();
+

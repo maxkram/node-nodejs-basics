@@ -1,20 +1,19 @@
-import fs from 'fs/promises';
+import { existsSync, mkdir, readdir, copyFile } from 'fs';
 import path from 'path';
 
 export const copy = async () => {
-  try {
-    await fs.rm(copy, { recursive: true, force: true });
-    await fs.mkdir(copy);
-    const items = await fs.readdir(main, { withFileTypes: true });
-    items.forEach((i) => {
-      if (i.isFile()) {
-        fs.copyFile(path.join(main, i.name), path.join(copy, i.name));
-      }
-      if (i.isDirectory()) {
-        copying(path.join(main, i.name), path.join(copy, i.name));
-      }
-    });
-  } catch (err) {
-    console.log('Ошибочка: ', '\x1b[31m', err);
+  if (!existsSync('files') || !existsSync('files_copy')) {
+    throw new Error('FS operation failed');
+  }
+  mkdir('files_copy', { recursive: true });
+  let files = readdir('files', { withFileTypes: true });
+  for (let file of files) {
+    let from = path.join('files', file.name);
+    let to = path.join('files-copy', file.name);
+    if (file.isDirectory()) {
+      copyDir(from, to);
+    } else {
+      copyFile(from, to);
+    }
   }
 };
