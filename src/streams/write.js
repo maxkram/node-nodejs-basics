@@ -12,3 +12,4 @@ export const write = async () => {
   const writeStream = fs.createWriteStream(into);
   process.stdin.pipe(writeStream);
 };
+write();

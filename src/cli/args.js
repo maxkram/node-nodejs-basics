@@ -4,3 +4,4 @@ export const parseArgs = () => {
     if (i + 2 < process.argv.length) process.stdout.write(', ');
   }
 };
+parseArgs();

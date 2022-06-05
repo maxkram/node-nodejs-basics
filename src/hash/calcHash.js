@@ -6,5 +6,5 @@ export const calculateHash = async () => {
   const hashSum = crypto.createHash('sha256');
   hashSum.update(fileBuffer);
   const hex = hashSum.digest('hex');
-  return hex;
+  console.log(hex);
 };

@@ -8,3 +8,4 @@ export const sendResult = () => {
     wt.parentPort.postMessage({ status: 'resolved', data: nthFibonacci(n) });
   });
 };
+
