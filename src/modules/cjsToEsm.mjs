@@ -2,6 +2,7 @@ import { dirname, sep } from 'path';
 import { release, version } from 'os';
 import { createServer as createServerHttp } from 'http';
 import './files/c';
+import { fileURLToPath } from 'url';
 import a from './files/a.json';
 import b from './files/b.json';
 const __filename = fileURLToPath(import.meta.url);
