@@ -11,3 +11,4 @@ export const rename = async () => {
     }
   );
 };
+rename();

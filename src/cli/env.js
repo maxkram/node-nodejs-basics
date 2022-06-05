@@ -4,3 +4,4 @@ export const parseEnv = () => {
     if (n.startsWith('RSS_')) arr.push(`${n}=${process.env[n]}`);
   console.log(arr.join('; '));
 };
+parseEnv();

@@ -10,3 +10,4 @@ export const transform = async () => {
   const T = new T();
   process.stdin.pipe(T).pipe(process.stdout);
 };
+transform();
