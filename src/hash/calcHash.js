@@ -8,3 +8,4 @@ export const calculateHash = async () => {
   const hex = hashSum.digest('hex');
   console.log(hex);
 };
+console.log(await calculateHash());

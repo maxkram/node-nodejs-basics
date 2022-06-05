@@ -22,3 +22,4 @@ export const performCalculations = async () => {
   }
   console.log(await Promise.all(res));
 };
+performCalculations();

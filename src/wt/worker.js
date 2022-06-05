@@ -9,3 +9,4 @@ export const sendResult = () => {
   });
 };
 
+sendResult();

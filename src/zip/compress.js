@@ -21,3 +21,4 @@ export const compress = async () => {
   const zip = zlib.createGzip();
   fromWhat.pipe(zip).pipe(toWhat);
 };
+compress();

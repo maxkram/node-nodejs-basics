@@ -21,3 +21,4 @@ export const decompress = async () => {
   const zip = zlib.createUnzip();
   fromWhat.pipe(zip).pipe(toWhat);
 };
+decompress();
